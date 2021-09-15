@@ -1,0 +1,330 @@
+/*----------  GOOGLE FONTS  ----------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/*----------  VARIABLES  ----------*/
+:root {
+  /*----------  COLORS   ----------*/
+  --clr-primary: #ea580c; //20,90,48
+  --clr-grey-900: #111827; //220,24,39
+  --clr-grey-600: #52525b; //240,5,33
+  --clr-grey-100: #f3f4f6; //220,14,95
+
+  --box-shadow-sm: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.15);
+  --nav-bar-height: 80px;
+  --border-radius: 5px;
+
+  /*----------  SPACING  ----------*/
+  --sp-xs: 0.25rem;
+  --sp-sm: 0.5rem;
+  --sp-md: 1rem;
+  --sp-lg: 1.5rem;
+  --sp-xl: 2rem;
+  --sp-2xl: 3rem;
+  --sp-3xl: 4rem;
+
+  /*----------  TYPOGRAPHY  ----------*/
+  --font-family: "Poppins", sans-serif;
+
+  //   --fs-xl: 2rem; /* 32px */
+  --fs-lg: 1.5rem; /* 24px */
+  --fs-md: 1.125rem; /* 18px */
+  --fs-sm: 1rem; /* 16px */
+  --fs-xs: 0.875rem; /* 14px */
+
+  --fw-reg: 400;
+  --fw-md: 500;
+  --fw-bold: 700;
+}
+
+/*----------  CSS BASE  ----------*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-reg);
+  color: var(--clr-grey-900);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/*----------  COMPONENTS  ----------*/
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--sp-lg);
+}
+
+.btn {
+  text-transform: uppercase;
+  font-size: var(--fs-sm);
+  letter-spacing: 1px;
+  font-weight: var(--fw-bold);
+  background-color: var(--clr-grey-600);
+  color: white;
+  padding: 0.65rem 3rem;
+  border-radius: var(--border-radius);
+
+  &--primary {
+    background-color: var(--clr-primary);
+    color: white;
+    transition: all 0.15s ease;
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0.2rem 0.5rem var(--clr-primary);
+    }
+  }
+}
+
+/*----------  HEADER  ----------*/
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--nav-bar-height);
+
+    &__logo > a {
+      font-size: var(--fs-lg);
+      font-weight: var(--fw-bold);
+      letter-spacing: 1px;
+      color: var(--clr-grey-900);
+
+      span {
+        color: var(--clr-primary);
+      }
+    }
+
+    &__menu {
+      display: flex;
+      gap: var(--sp-lg);
+
+      &__item {
+        position: relative;
+        color: var(--clr-grey-900);
+        font-size: var(--fs-md);
+        text-transform: capitalize;
+        transition: color 0.2s;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -3px;
+          width: 100%;
+          height: 2px;
+          background-color: var(--clr-primary);
+          transform: scaleX(0);
+          transition: transform 0.2s ease-in-out;
+        }
+
+        &:hover {
+          color: var(--clr-primary);
+
+          &::before {
+            transform: scaleX(1);
+          }
+        }
+
+        &.active {
+          color: var(--clr-primary);
+          font-weight: var(--fw-md);
+
+          &::before {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+
+    &__cart {
+      position: relative;
+      font-size: var(--fs-lg);
+
+      &__qty {
+        position: absolute;
+        left: 20px;
+        top: 0;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--fs-xs);
+        color: white;
+        background-color: var(--clr-primary);
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}
+
+/*----------  HERO  ----------*/
+section#hero {
+  position: relative;
+  padding: var(--nav-bar-height) 0 0 0;
+  background-color: var(--clr-grey-100);
+  height: 100vh;
+  max-height: 950px;
+  overflow: hidden;
+
+  .big-circle {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    opacity: 10%;
+    background-color: var(--clr-primary);
+  }
+}
+
+/*----------  PRODUCTS SLIDER  ----------*/
+.swiper.products-slider {
+  width: 100%;
+  height: 100vh;
+  max-height: 950px;
+}
+
+.products-slider {
+  &__item {
+    position: relative;
+
+    .item__image {
+      position: absolute;
+      max-width: 60%;
+      top: 1rem;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    .detail-card {
+      position: absolute;
+      top: 10rem;
+      right: 0;
+      background-color: rgba(255, 255, 255, 0.75);
+      padding: var(--sp-lg);
+      border-radius: var(--border-radius);
+      max-width: 350px;
+
+      .title {
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-lg);
+
+        margin-bottom: var(--sp-sm);
+      }
+
+      .description {
+        color: var(--clr-grey-600);
+        margin-bottom: var(--sp-lg);
+      }
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    top: 11rem;
+    left: 0;
+    max-width: max-content;
+    max-height: max-content;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-md);
+
+    &__item {
+      cursor: pointer;
+      font-size: var(--fs-md);
+      color: var(--clr-grey-600);
+      transition: all 0.5s ease;
+
+      &--active {
+        padding-left: var(--sp-sm);
+        font-size: var(--fs-lg);
+        color: var(--clr-grey-900);
+        font-weight: var(--fw-md);
+      }
+    }
+  }
+}
+
+/*----------  REVIEWS SLIDER  ----------*/
+.reviews-container {
+  position: absolute;
+  bottom: 8rem;
+  left: 0;
+  right: 0;
+
+  .swiper.reviews-slider {
+    overflow: visible;
+  }
+
+  .reviews-slider {
+    &__item {
+      box-shadow: var(--box-shadow-sm);
+    }
+
+    .review-card {
+      background-color: white;
+      padding: var(--sp-md);
+      border-radius: var(--border-radius);
+
+      .name {
+        display: block;
+        font-size: var(--fs-md);
+        font-weight: var(--fw-md);
+        margin-bottom: var(--sp-xs);
+
+        i {
+          color: var(--clr-primary);
+        }
+      }
+
+      .review {
+        color: var(--clr-grey-600);
+      }
+    }
+  }
+}

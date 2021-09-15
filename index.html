@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- BOX ICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="assets/scss/swiper-bundle.min.css" />
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="./assets/scss/style.css" />
+
+    <title>Ecommerce Fashion Landing Page for Youtube</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <!-- NAVBAR -->
+        <nav class="nav" id="nav">
+          <div class="nav__logo">
+            <a href="#"> L<span>O</span>G<span>O</span> </a>
+          </div>
+
+          <ul class="nav__menu">
+            <li><a href="#" class="nav__menu__item active">home</a></li>
+            <li><a href="#" class="nav__menu__item">shop</a></li>
+            <li><a href="#" class="nav__menu__item">blog</a></li>
+            <li><a href="#" class="nav__menu__item">contact</a></li>
+          </ul>
+
+          <div class="nav__cart">
+            <i class="bx bx-cart"></i>
+            <span class="nav__cart__qty">3</span>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- HERO -->
+      <section id="hero">
+        <div class="container">
+          <div class="big-circle"></div>
+          <!-- PRODUCTS SLIDER -->
+          <div class="products-container">
+            <div class="swiper products-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide products-slider__item">
+                  <img
+                    src="./assets/images/model-2.png"
+                    alt="product 1"
+                    class="item__image"
+                  />
+
+                  <div class="detail-card">
+                    <h1 class="title">Office Dress New Design</h1>
+
+                    <p class="description">
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majorit
+                    </p>
+
+                    <button class="btn btn--primary">shop now</button>
+                  </div>
+                </div>
+                <div class="swiper-slide products-slider__item">
+                  <img
+                    src="./assets/images/model-1.png"
+                    alt="product 1"
+                    class="item__image"
+                  />
+
+                  <div class="detail-card">
+                    <h1 class="title">Strapless Dresses</h1>
+
+                    <p class="description">
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority have suffered alteration in
+                      some form.
+                    </p>
+
+                    <button class="btn btn--primary">shop now</button>
+                  </div>
+                </div>
+                <div class="swiper-slide products-slider__item">
+                  <img
+                    src="./assets/images/model-3.png"
+                    alt="product 1"
+                    class="item__image"
+                  />
+
+                  <div class="detail-card">
+                    <h1 class="title">Satin Strap Mini Dress</h1>
+
+                    <p class="description">
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority have suffered alteration in
+                      some form Lorem ipsum dolor sit amet.
+                    </p>
+
+                    <button class="btn btn--primary">shop now</button>
+                  </div>
+                </div>
+              </div>
+              <div class="products-slider__pagination"></div>
+
+              <!-- REVIEWS SLIDER -->
+              <div class="reviews-container">
+                <div class="swiper reviews-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide reviews-slider__item">
+                      <div class="review-card">
+                        <span class="name">John Doe</span>
+                        <p class="review">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Fuga, natus!
+                        </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide reviews-slider__item">
+                      <div class="review-card">
+                        <span class="name"
+                          >Mary Brown <i class="bx bxs-star"></i>
+                          <i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+                        </span>
+
+                        <p class="review">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Fuga, natus!
+                        </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide reviews-slider__item">
+                      <div class="review-card">
+                        <span class="name"
+                          >Miad V <i class="bx bxs-star"></i>
+                          <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                          ><i class="bx bxs-star"></i
+                        ></span>
+                        <p class="review">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Fuga, natus!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- SWIPER JS -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- JAVASCRIPT -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
