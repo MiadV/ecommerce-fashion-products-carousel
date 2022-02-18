@@ -1,0 +1,36 @@
+{
+  "name": "fashion-products-carousel",
+  "version": "2.0.0",
+  "description": "Ecommerce Fashion Products Carousel With SwiperJs",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiadV/ecommerce-fashion-products-carousel.git"
+  },
+  "keywords": [
+    "landing page template",
+    "html template",
+    "swiper js"
+  ],
+  "author": {
+    "name": "Miad V",
+    "email": "miadv.biz@gmail.com",
+    "url": "http://miadv.dev/"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MiadV/ecommerce-fashion-products-carousel/issues"
+  },
+  "homepage": "https://github.com/MiadV/ecommerce-fashion-products-carousel#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "sass": "^1.49.8",
+    "vite": "^2.8.0"
+  }
+}

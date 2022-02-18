@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -12,10 +13,10 @@
     />
 
     <!-- SWIPER CSS -->
-    <link rel="stylesheet" href="assets/scss/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/vendor/swiper-bundle.min.css" />
 
-    <!-- CSS FILES -->
-    <link rel="stylesheet" href="./assets/scss/style.css" />
+    <!-- SCSS: will be proccessed with our bundler and replaced with CSS -->
+    <link rel="stylesheet" href="./scss/style.scss" />
 
     <title>Ecommerce Fashion Landing Page for Youtube</title>
   </head>
@@ -53,7 +54,7 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide products-slider__item">
                   <img
-                    src="./assets/images/model-2.png"
+                    src="/images/model-2.png"
                     alt="product 1"
                     class="item__image"
                   />
@@ -71,7 +72,7 @@
                 </div>
                 <div class="swiper-slide products-slider__item">
                   <img
-                    src="./assets/images/model-1.png"
+                    src="/images/model-1.png"
                     alt="product 1"
                     class="item__image"
                   />
@@ -90,7 +91,7 @@
                 </div>
                 <div class="swiper-slide products-slider__item">
                   <img
-                    src="./assets/images/model-3.png"
+                    src="/images/model-3.png"
                     alt="product 1"
                     class="item__image"
                   />
@@ -159,9 +160,9 @@
     </main>
 
     <!-- SWIPER JS -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="/vendor/swiper-bundle.min.js"></script>
 
-    <!-- JAVASCRIPT -->
-    <script src="./assets/js/main.js"></script>
+    <!-- MAIN JS -->
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
