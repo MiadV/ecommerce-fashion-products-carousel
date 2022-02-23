@@ -12,7 +12,10 @@
 
 Join my youtube channel to see more videos like this. [Youtube Channel](https://www.youtube.com/c/MiadVosoughi)
 
-![](/preview.png)
+[**👉View Live**](https://enpq2z.csb.app/)
+<br/>
+
+![Ecommerce Fashion Products Carousel](/preview.png)
 
 ### Development
 
